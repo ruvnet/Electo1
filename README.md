@@ -187,3 +187,14 @@ GET /status/
 
 6. **Deploy the updated system**:
    - Use containerization (e.g., Docker) and orchestration (e.g., Kubernetes) to deploy the updated system to production environments.
+
+## Documentation
+
+The `/documentation` folder contains detailed documentation on various aspects of the system. Below is a brief description of each document:
+
+- **[User Guide](documentation/user_guide.md)**: Provides a detailed user guide for using the system, including instructions on how to set up and run the system, and explains the main features and functionalities.
+- **[Customization Guide](documentation/customization.md)**: Provides instructions for customizing the system, including details on how to modify the configuration files, add new data sources, and update the model.
+- **[API Reference](documentation/api_reference.md)**: Provides detailed API documentation, including descriptions of all available endpoints and example requests and responses for each endpoint.
+- **[Developer Guide](documentation/dev_guide.md)**: Provides a developer guide for contributing to the project, including instructions on how to set up the development environment, understand the code structure, and add new features.
+- **[Algorithms](documentation/algorithms.md)**: Provides a detailed explanation of the algorithms used in the system, including descriptions of the data ingestion, processing, and prediction algorithms, and explains the optimization techniques used in the system.
+- **[Advanced Uses](documentation/advanced_uses.md)**: Provides advanced use cases and examples, including instructions on how to use the system for real-time election monitoring and how to integrate the system with other applications.
