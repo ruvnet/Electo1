@@ -9,7 +9,7 @@ class ElectionPredictor:
         self.model = RandomForestClassifier(n_estimators=100, random_state=42)
         self.is_model_trained = False
 
-    def train(self, data):
+    def train(self, data: pd.DataFrame) -> float:
         X = data.drop('result', axis=1)
         y = data['result']
 
@@ -26,14 +26,14 @@ class ElectionPredictor:
 
         return accuracy
 
-    def predict(self, data):
+    def predict(self, data: pd.DataFrame) -> str:
         if not self.is_model_trained:
             raise Exception("Model not trained yet")
         
         prediction = self.model.predict(data)
         return prediction[0]
 
-    def is_trained(self):
+    def is_trained(self) -> bool:
         return self.is_model_trained
 
     def load_model(self):
