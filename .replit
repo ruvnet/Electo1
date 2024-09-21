@@ -15,6 +15,10 @@ author = "agent"
 task = "workflow.run"
 args = "Start FastAPI server"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Run Flask App"
+
 [[workflows.workflow]]
 name = "Start FastAPI server"
 author = "agent"
@@ -26,6 +30,18 @@ agentRequireRestartOnSave = false
 task = "shell.exec"
 args = "uvicorn api.main:app --host 0.0.0.0 --port 8000"
 waitForPort = 8000
+
+[[workflows.workflow]]
+name = "Run Flask App"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python main.py"
+waitForPort = 5000
 
 [deployment]
 run = ["sh", "-c", "uvicorn api.main:app --host 0.0.0.0 --port 8000"]
