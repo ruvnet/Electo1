@@ -1,4 +1,5 @@
 # Agentic Election Prediction System
+What if you could predict every election on individual level for the entire world, in real time.
 
 ## Introduction
 
